@@ -1,0 +1,101 @@
+// font
+@import url("https://fonts.googleapis.com/css2?family=Amarante&family=Dokdo&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+// fonts
+$main-font: Josefin Sans;
+$title-font: Amarante;
+$accent-font: Dokdo;
+
+// colors
+$text: #242424;
+$dark: #121212;
+$light: #f5f5f5;
+
+// gradient effect
+$color-bg1: #3a1a21;
+$color-bg2: #121830;
+$color1: #347dea;
+$color2: #c168d5;
+$color3: #33b0d5;
+$color4: #de5454;
+$color5: #b47332;
+$color-interactive: #7456d1;
+
+$color1-light: #a5c3f1;
+$color2-light: #e19ef0;
+$color3-light: #a7e0f2;
+$color4-light: #dca6a6;
+$color5-light: #f3cca4;
+
+// other variables
+$circle-size: 80%;
+$blending: hard-light;
+
+::-moz-selection {
+  background: $text;
+  color: $light;
+}
+
+::selection {
+  background: $text;
+  color: $light;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: $main-font;
+  font-weight: 300;
+  color: $text;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  background-color: $dark;
+}
+
+p {
+  margin-bottom: 1em;
+  transition: 0.5s;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $title-font;
+  transition: 0.5s;
+}
+
+h1 {
+  font-size: 4.8em;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.2em;
+}
+
+.subtitle {
+  font-family: $accent-font;
+  font-size: 1.6em;
+  line-height: 1.4em;
+  margin: 0;
+  transition: 0.5s;
+}

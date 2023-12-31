@@ -1,0 +1,77 @@
+@import "/src/index.scss";
+
+// navbar
+nav {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $dark;
+  color: $light;
+  padding: 20px 20px;
+  font-size: smaller;
+  transition: 0.5s;
+  z-index: 999;
+
+  &.sticky {
+    position: sticky;
+    top: 0;
+  }
+
+  .logo {
+    font-family: $title-font;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1.2px solid $color2-light;
+    color: $color2-light;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+  }
+
+  .pages {
+    margin-left: 15px;
+
+    .page {
+      color: $light;
+      transition: 0.5s;
+      cursor: pointer;
+      display: inline;
+
+      &:hover {
+        opacity: 0.7;
+        color: $color2-light;
+      }
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      &.active {
+        color: $color2-light;
+        pointer-events: none;
+      }
+
+      &:nth-child(4n + 2) {
+        &:hover,
+        &.active {
+          color: $color1-light;
+        }
+      }
+
+      &:nth-child(4n + 3) {
+        &:hover,
+        &.active {
+          color: $color4-light;
+        }
+      }
+
+      &:nth-child(4n + 4) {
+        &:hover,
+        &.active {
+          color: $color3-light;
+        }
+      }
+    }
+  }
+}
