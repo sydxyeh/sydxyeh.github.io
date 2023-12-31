@@ -109,13 +109,13 @@ export const images: Image[] = [{
     medium: "3D Printed Design",
     tags: ["product"],
 },
-// {
-//     src: "",
-//     alt: "",
-//     year: 2022,
-//     medium: "",
-//     tags: ["ui"],
-// },
+{
+    src: "https://static.wixstatic.com/media/cd2846_5d14e97a76644ccfbda673fa459fb59c~mv2.jpg",
+    alt: "Spirit",
+    year: 2022,
+    medium: "Digital Painting",
+    tags: ["paint"],
+},
 // {
 //     src: "",
 //     alt: "",
