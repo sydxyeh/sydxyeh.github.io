@@ -13,18 +13,23 @@ function Nav() {
   const scrollY = useWindowScroll()[0].y as number;
   const width = useWindowSize().width as number;
 
-  useEffect(() => {
-    // keep track of nav position
-    setNavTop(document.getElementById("nav")?.offsetTop as number);
-  }, [width]);
-
-  useEffect(() => {
-    // control sticky nav
+  const changeSticky = () => {
     if (scrollY >= navTop && !isSticky) {
       setIsSticky(true);
     } else if (scrollY < navTop && isSticky) {
       setIsSticky(false);
     }
+  };
+
+  useEffect(() => {
+    // keep track of nav position
+    setNavTop(document.getElementById("nav")?.offsetTop as number);
+    changeSticky();
+  }, [width]);
+
+  useEffect(() => {
+    // control sticky nav
+    changeSticky();
   }, [scrollY]);
 
   return (
