@@ -59,13 +59,14 @@ export const Project: FC<ProjectProps> = ({ proj }) => {
       }
 
       if (
-        scrollX >=
-        (elem as HTMLElement).offsetWidth -
-          (outerelem as HTMLElement).offsetWidth
+        scrollX === 0 ||
+        scrollX <
+          (elem as HTMLElement).offsetWidth -
+            (outerelem as HTMLElement).offsetWidth
       ) {
-        setMaxScroll(true);
-      } else {
         setMaxScroll(false);
+      } else {
+        setMaxScroll(true);
       }
     }
   };
@@ -105,7 +106,9 @@ export const Project: FC<ProjectProps> = ({ proj }) => {
     <div className="project">
       <Grid container spacing={4} className="proj-grid">
         <Grid item xs={4} md={5} className="proj-title">
-          <h3>{proj.title}</h3>
+          <h3>
+            {proj.title} ({proj.year})
+          </h3>
           <p>{proj.summary}</p>
         </Grid>
         <Grid item xs={8} md={7} className="proj-desc">

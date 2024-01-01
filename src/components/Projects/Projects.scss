@@ -51,16 +51,16 @@
     &:not(:last-child) {
       margin-bottom: 20px;
       padding-bottom: 20px;
-      background: linear-gradient(
-          to right,
-          $color2-light 0%,
-          $color1-light 25%,
-          $color3-light 50%,
-          $color1-light 75%,
-          $color2-light 100%
-        )
-        left bottom transparent no-repeat;
-      background-size: 100% 2px;
+      // background: linear-gradient(
+      //     to right,
+      //     $color2-light 0%,
+      //     $color1-light 25%,
+      //     $color3-light 50%,
+      //     $color1-light 75%,
+      //     $color2-light 100%
+      //   )
+      //   left bottom transparent no-repeat;
+      // background-size: 100% 2px;
     }
 
     .proj-title {
@@ -76,7 +76,8 @@
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        width: min-content;
+        width: max-content;
+        max-width: 100%;
 
         transition: 0.5s;
       }
