@@ -11,7 +11,7 @@ function Nav() {
   const [navTop, setNavTop] = useState(0);
 
   const scrollY = useWindowScroll()[0].y as number;
-  const width = useWindowSize().width as number;
+  const size = useWindowSize();
 
   const changeSticky = () => {
     if (scrollY >= navTop && !isSticky) {
@@ -25,7 +25,7 @@ function Nav() {
     // keep track of nav position
     setNavTop(document.getElementById("nav")?.offsetTop as number);
     changeSticky();
-  }, [width]);
+  }, [size]);
 
   useEffect(() => {
     // control sticky nav
