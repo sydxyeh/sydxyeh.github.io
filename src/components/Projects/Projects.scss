@@ -43,14 +43,14 @@
 
     &:last-child {
       margin-bottom: 0;
-      margin-top: 64px;
+      margin-top: 80px;
     }
   }
 
   .project {
     &:not(:last-child) {
-      margin-bottom: 20px;
-      padding-bottom: 20px;
+      margin-bottom: 32px;
+      padding-bottom: 32px;
       // background: linear-gradient(
       //     to right,
       //     $color2-light 0%,
