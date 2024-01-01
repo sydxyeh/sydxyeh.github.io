@@ -99,3 +99,25 @@ h1 {
   margin: 0;
   transition: 0.5s;
 }
+
+#to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: $light;
+  z-index: 9999;
+  transform: scale(1.4);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &.visible {
+    opacity: 1;
+    pointer-events: initial;
+    visibility: visible;
+  }
+}
