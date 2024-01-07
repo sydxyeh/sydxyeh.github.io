@@ -48,18 +48,18 @@
 
   .project {
     // &:not(:last-child) {
-    margin-bottom: 64px;
+    // margin-bottom: 64px;
     padding-bottom: 64px;
-    background: linear-gradient(
-        to right,
-        $color2-light 0%,
-        $color1-light 25%,
-        $color3-light 50%,
-        $color1-light 75%,
-        $color2-light 100%
-      )
-      left bottom transparent no-repeat;
-    background-size: 100% 2px;
+    // background: linear-gradient(
+    //     to right,
+    //     $color2-light 0%,
+    //     $color1-light 25%,
+    //     $color3-light 50%,
+    //     $color1-light 75%,
+    //     $color2-light 100%
+    //   )
+    //   left bottom transparent no-repeat;
+    // background-size: 100% 2px;
     // }
 
     .proj-title {
@@ -160,6 +160,14 @@
           }
         }
       }
+    }
+
+    .gradient-bg {
+      height: 80px;
+      width: 100vw;
+      position: relative;
+      left: calc(-50vw + 50%);
+      margin-top: 64px;
     }
   }
 }
