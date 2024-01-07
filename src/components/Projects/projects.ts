@@ -13,7 +13,8 @@ export type Proj = {
     year: number;
     summary: string;
     description: string;
-    figma: string;
+    video?: string;
+    figma?: string;
     pics: ProjImg[];
 }
 
@@ -71,4 +72,12 @@ export const projects: Proj[] = [{
     src: "https://static.wixstatic.com/media/cd2846_382ce6e46f184230ae11e63cd95924e2~mv2.png",
     alt: "Journey 3 - Creativity"
 }]
-}];
+}, {
+    title: "Legacy Lens: Unearthing Stanford's Hidden Stories",
+    year: 2023,
+    summary: "An augmented reality journey that invites users to explore Stanford's historic quad",
+    description: "\"Legacy Lens\" offers a unique augmented reality experience that transforms Stanford University's iconic main quad into a portal to the past. Users embark on an interactive journey to discover the hidden layers of Stanford's history. As they scan the various class plaques scattered across the quad, they unlock virtual time capsules containing artifacts, each tied to a different era of the university's storied past." + "\n" + "In this immersive experience, the users not only uncover physical items but are also regaled with narratives and anecdotes from Stanford's alumni, faculty, and students. These stories span across generations, offering insights into the evolving culture, significant milestones, and the pivotal moments that have shaped the university. The experience is designed to engage users in a multifaceted exploration of Stanford's legacy, blending educational elements with interactive storytelling.",
+    pics: [],
+    video: "https://www.youtube.com/embed/geaOWNHmEp4?si=xKcDVa6cpr0AVSA3"
+}
+];

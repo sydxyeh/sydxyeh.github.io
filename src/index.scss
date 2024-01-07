@@ -1,10 +1,12 @@
 // font
 @import url("https://fonts.googleapis.com/css2?family=Amarante&family=Dokdo&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800;1,6..96,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Belleza&family=Chelsea+Market&display=swap");
 
 // fonts
-$main-font: Josefin Sans;
-$title-font: Amarante;
-$accent-font: Dokdo;
+$main-font: Belleza;
+$title-font: Bodoni Moda;
+$accent-font: Chelsea Market;
 
 // colors
 $text: #242424;
@@ -61,7 +63,7 @@ body {
   font-family: $main-font;
   font-weight: 300;
   color: $text;
-  font-size: 1.2em;
+  font-size: 1.4em;
   line-height: 1.4em;
   background-color: $dark;
 }
@@ -94,8 +96,8 @@ h1 {
 
 .subtitle {
   font-family: $accent-font;
-  font-size: 1.6em;
-  line-height: 1.4em;
+  font-size: 1.5em;
+  line-height: 1.5em;
   margin: 0;
   transition: 0.5s;
 }

@@ -105,76 +105,85 @@ export const Project: FC<ProjectProps> = ({ proj }) => {
   return (
     <div className="project">
       <Grid container spacing={4} className="proj-grid">
-        <Grid item xs={4} md={5} className="proj-title">
+        <Grid item xs={6} md={6} className="proj-title">
           <h3>
             {proj.title} ({proj.year})
           </h3>
           <p>{proj.summary}</p>
         </Grid>
-        <Grid item xs={8} md={7} className="proj-desc">
+        <Grid item xs={6} md={6} className="proj-desc">
           <p>{proj.description}</p>
         </Grid>
       </Grid>
-      <iframe className="figma" src={proj.figma} allowFullScreen></iframe>
-      <div className="proj-process">
-        <h3>The Process</h3>
-        <div className="proj-slider">
-          <ArrowBackIos
-            className={"prev icon " + (minScroll ? "disabled" : "")}
-            onClick={() => scroll("left")}
-          />
-          <div className="proj-imgs" ref={carouselRef} onScroll={onScroll}>
-            <div className="proj-img-container" ref={innerRef}>
-              {proj.pics.map((pic, i) => (
-                <img
-                  src={pic.src}
-                  alt={pic.alt}
-                  title={pic.alt}
-                  loading="lazy"
-                  key={pic.alt}
-                  onClick={() => openModal(i)}
-                />
-              ))}
+      {proj.figma && (
+        <iframe className="figma" src={proj.figma} allowFullScreen></iframe>
+      )}
+      {proj.video && (
+        <iframe className="video" src={proj.video} allowFullScreen></iframe>
+      )}
+      {proj.pics.length > 0 && (
+        <>
+          <div className="proj-process">
+            <h3>The Process</h3>
+            <div className="proj-slider">
+              <ArrowBackIos
+                className={"prev icon " + (minScroll ? "disabled" : "")}
+                onClick={() => scroll("left")}
+              />
+              <div className="proj-imgs" ref={carouselRef} onScroll={onScroll}>
+                <div className="proj-img-container" ref={innerRef}>
+                  {proj.pics.map((pic, i) => (
+                    <img
+                      src={pic.src}
+                      alt={pic.alt}
+                      title={pic.alt}
+                      loading="lazy"
+                      key={pic.alt}
+                      onClick={() => openModal(i)}
+                    />
+                  ))}
+                </div>
+              </div>
+              <ArrowBackIos
+                className={"next icon " + (maxScroll ? "disabled" : "")}
+                onClick={() => scroll("right")}
+              />
             </div>
           </div>
-          <ArrowBackIos
-            className={"next icon " + (maxScroll ? "disabled" : "")}
-            onClick={() => scroll("right")}
-          />
-        </div>
-      </div>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-        id="proj-modal"
-      >
-        <div className="modal-contain">
-          <Close className="icon close" onClick={handleClose} />
-          <ArrowBackIos
-            className={"prev icon " + (curIndex === 0 ? "disabled" : "")}
-            onClick={prevImg}
-          />
-          <div className="img-contain">
-            <img
-              src={curImg.src}
-              alt={curImg.alt}
-              title={curImg.alt}
-              loading="lazy"
-              key={curImg.alt}
-            />
-          </div>
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+            id="proj-modal"
+          >
+            <div className="modal-contain">
+              <Close className="icon close" onClick={handleClose} />
+              <ArrowBackIos
+                className={"prev icon " + (curIndex === 0 ? "disabled" : "")}
+                onClick={prevImg}
+              />
+              <div className="img-contain">
+                <img
+                  src={curImg.src}
+                  alt={curImg.alt}
+                  title={curImg.alt}
+                  loading="lazy"
+                  key={curImg.alt}
+                />
+              </div>
 
-          <ArrowBackIos
-            className={
-              "next icon " +
-              (curIndex === proj.pics.length - 1 ? "disabled" : "")
-            }
-            onClick={nextImg}
-          />
-        </div>
-      </Modal>
+              <ArrowBackIos
+                className={
+                  "next icon " +
+                  (curIndex === proj.pics.length - 1 ? "disabled" : "")
+                }
+                onClick={nextImg}
+              />
+            </div>
+          </Modal>
+        </>
+      )}
     </div>
   );
 };

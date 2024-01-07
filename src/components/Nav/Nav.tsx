@@ -47,10 +47,10 @@ function Nav() {
         </div>
         <div
           className={"page " + (activeSection === "design" ? "active" : "")}
-          title="graphic + ui/ux"
+          title="ui/ux + graphic"
           onClick={() => setActiveSection("design")}
         >
-          Graphic &amp; UI/UX
+          UI/UX &amp; Graphic
         </div>
         <div
           className={"page " + (activeSection === "paint" ? "active" : "")}
@@ -59,13 +59,13 @@ function Nav() {
         >
           Paint &amp; Sculpture
         </div>
-        <div
+        {/* <div
           className={"page " + (activeSection === "fashion" ? "active" : "")}
           title="fashion"
           onClick={() => setActiveSection("fashion")}
         >
           Fashion
-        </div>
+        </div> */}
       </div>
     </nav>
   );

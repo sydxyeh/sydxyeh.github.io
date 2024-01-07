@@ -42,48 +42,48 @@
     transition: 0.5s;
 
     &:last-child {
-      margin-bottom: 0;
-      margin-top: 80px;
+      text-align: center;
     }
   }
 
   .project {
-    &:not(:last-child) {
-      margin-bottom: 32px;
-      padding-bottom: 32px;
-      // background: linear-gradient(
-      //     to right,
-      //     $color2-light 0%,
-      //     $color1-light 25%,
-      //     $color3-light 50%,
-      //     $color1-light 75%,
-      //     $color2-light 100%
-      //   )
-      //   left bottom transparent no-repeat;
-      // background-size: 100% 2px;
-    }
+    // &:not(:last-child) {
+    margin-bottom: 64px;
+    padding-bottom: 64px;
+    background: linear-gradient(
+        to right,
+        $color2-light 0%,
+        $color1-light 25%,
+        $color3-light 50%,
+        $color1-light 75%,
+        $color2-light 100%
+      )
+      left bottom transparent no-repeat;
+    background-size: 100% 2px;
+    // }
 
     .proj-title {
       transition: 0.5s;
 
       h3 {
         font-family: $accent-font;
-        font-size: xx-large;
+        font-size: 48px;
+        line-height: 60px;
         margin-bottom: 8px;
-        // color: $color1-light;
+        color: $light;
 
-        background: -webkit-linear-gradient(45deg, $light, $color1-light);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        width: max-content;
-        max-width: 100%;
+        // background: -webkit-linear-gradient(45deg, $light, $color1-light);
+        // -webkit-background-clip: text;
+        // background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        // width: max-content;
+        // max-width: 100%;
 
         transition: 0.5s;
       }
       p {
         font-style: italic;
-        font-size: smaller;
+        font-size: x-small;
 
         transition: 0.5s;
       }
@@ -93,14 +93,15 @@
       transition: 0.5s;
 
       p {
-        font-size: small;
+        font-size: 14px;
         font-weight: 200;
         transition: 0.5s;
       }
     }
 
-    .figma {
-      margin: 16px auto;
+    .figma,
+    .video {
+      margin: 32px auto;
       width: 100%;
       height: 80vh;
       border: none;
@@ -114,7 +115,7 @@
         text-transform: lowercase;
         letter-spacing: 1.6px;
         text-align: center;
-        margin-bottom: 8px;
+        margin-bottom: 32px;
       }
     }
 

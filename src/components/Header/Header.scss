@@ -8,10 +8,13 @@
   color: $light;
   position: relative;
   transition: 0.5s;
+  min-height: 90vh;
+  display: flex;
 
   #masthead {
     padding: 80px 40px;
     transition: 0.5s;
+    margin: auto;
 
     .header-icon {
       margin-top: 20px;

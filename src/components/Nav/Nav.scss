@@ -24,13 +24,13 @@ nav {
     letter-spacing: 2px;
     border: 1.2px solid $color2-light;
     color: $color2-light;
-    width: 26px;
-    height: 26px;
+    width: 32px;
+    height: 32px;
     text-align: center;
   }
 
   .pages {
-    margin-left: 15px;
+    margin-left: 20px;
 
     .page {
       color: $light;
@@ -44,7 +44,7 @@ nav {
       }
 
       &:not(:last-child) {
-        margin-right: 15px;
+        margin-right: 20px;
       }
 
       &.active {

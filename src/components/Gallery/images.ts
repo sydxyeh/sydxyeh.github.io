@@ -283,5 +283,12 @@ export const images: Image[] = [{
     year: 2020,
     medium: "Digital",
     tags: ["fashion"],
+},
+{
+    src: "https://static.wixstatic.com/media/cd2846_944c1c8485a7471aa44bf2653aa5d2a7~mv2.png",
+    alt: "Outside of the Tank",
+    year: 2023,
+    medium: "Blender 3D Render",
+    tags: ["paint"],
 }
 ]
