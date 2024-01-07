@@ -112,7 +112,7 @@ export const Project: FC<ProjectProps> = ({ proj }) => {
           <p>{proj.summary}</p>
         </Grid>
         <Grid item xs={6} md={6} className="proj-desc">
-          {proj.description.split("\n").map((item, i) => (
+          {proj.description.split("\n").map((item) => (
             <p key={item}>{item}</p>
           ))}
         </Grid>
