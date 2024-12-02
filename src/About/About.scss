@@ -1,0 +1,41 @@
+@import "/src/index.scss";
+
+#about {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+  color: $light;
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  h3 {
+    font-family: $accent-font;
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 8px;
+    color: $light;
+
+    transition: 0.5s;
+  }
+
+  .about-grid {
+    padding-bottom: 32px;
+
+    .about-desc {
+      transition: 0.5s;
+
+      p {
+        font-size: 14px;
+        font-weight: 200;
+        transition: 0.5s;
+      }
+    }
+  }
+}

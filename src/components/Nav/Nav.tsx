@@ -39,6 +39,13 @@ function Nav() {
       </a>
       <div className="pages">
         <div
+          className={"page " + (activeSection === "about" ? "active" : "")}
+          title="about"
+          onClick={() => setActiveSection("about")}
+        >
+          About
+        </div>
+        <div
           className={"page " + (activeSection === "home" ? "active" : "")}
           title="highlights"
           onClick={() => setActiveSection("home")}

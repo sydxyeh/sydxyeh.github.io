@@ -6,6 +6,7 @@ import Projects from "./components/Projects/MyProjects";
 import { useStore } from "./components/Stores/store";
 import { VerticalAlignTop } from "@mui/icons-material";
 import { useWindowScroll } from "@uidotdev/usehooks";
+import About from "./About/About";
 
 function App() {
   const { activeSection } = useStore();
@@ -15,8 +16,9 @@ function App() {
     <>
       <Header />
       <Nav />
+      <About />
       {activeSection === "design" && <Projects />}
-      <Gallery />
+      {activeSection !== "about" && <Gallery />}
       <a
         href="#"
         id="to-top"
